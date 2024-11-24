@@ -5,7 +5,16 @@
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 
 <div class="container signup-container">
-
+    @if(session()->has("success")) <!-- this condition is to display the alert message if it was successful or not-->
+    <div class="alert alert success">
+        {{session()->get("success")}}
+    </div>
+    @endif
+    @if(session()->has("error"))
+    <div class="alert alert success">
+        {{session()->get("error")}}
+    </div>
+    @endif
     <!-- Left Section -->
     <div class="left">
         <h1>Sign Up</h1>

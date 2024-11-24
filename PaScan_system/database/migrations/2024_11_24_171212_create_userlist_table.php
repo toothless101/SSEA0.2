@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('userlist', function (Blueprint $table) {
             $table->id();
+            $table->string('fullname');
+            $table->string('position')->nullable();
+            $table->string('username');
+            $table->string('password');
+            $table->timestamp('date');
             $table->timestamps();
         });
     }

@@ -5,7 +5,16 @@
 <link rel="stylesheet" href="{{ asset('css/log-in.css')}}">
 
 <div class="container">
-
+    @if(session()->has("success")) <!-- this condition is to display the alert message if it was successful or not-->
+    <div class="alert alert success">
+        {{session()->get("success")}}
+    </div>
+    @endif
+    @if(session()->has("error"))
+    <div class="alert alert success">
+        {{session()->get("error")}}
+    </div>
+    @endif
     <!-- Left Section -->
     <div class="left">
         <h1>TAGUM CITY COLLEGE OF SCIENCE AND TECHNOLOGY <br> FOUNDATION, INC.</h1>
