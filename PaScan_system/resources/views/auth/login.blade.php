@@ -3,15 +3,16 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('css/log-in.css')}}">
+<script src="{{asset('js/register.js')}}"></script>
 
 <div class="container">
     @if(session()->has("success")) <!-- this condition is to display the alert message if it was successful or not-->
-    <div class="alert alert success">
+    <div class="alert alert-success">
         {{session()->get("success")}}
     </div>
     @endif
     @if(session()->has("error"))
-    <div class="alert alert success">
+    <div class="alert alert-danger">
         {{session()->get("error")}}
     </div>
     @endif

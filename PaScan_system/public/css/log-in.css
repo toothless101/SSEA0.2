@@ -30,7 +30,9 @@ body {
     }
 }
 
-
+.alert{
+    position: absolute !important;
+}
 
 .right {
     width: 50%;

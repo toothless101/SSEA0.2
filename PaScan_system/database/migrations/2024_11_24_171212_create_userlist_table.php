@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('userlist', function (Blueprint $table) {
             $table->id();
             $table->string('fullname');
-            $table->string('position')->nullable();
+            $table->string('position');
             $table->string('username');
             $table->string('password');
             $table->timestamp('date');

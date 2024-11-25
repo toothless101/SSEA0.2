@@ -30,6 +30,9 @@ body {
     }
 }
 
+.alert{
+    position: absolute !important;
+}
 
 
 .left {
