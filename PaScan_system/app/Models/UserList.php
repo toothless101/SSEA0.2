@@ -1,5 +1,7 @@
 <?php
 
+
+//this model is for the db_table userlist where it stores all the list of users that being added. The encryption algorithm that being used for the password is the bcrypt.
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
