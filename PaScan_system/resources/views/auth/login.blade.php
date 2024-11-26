@@ -58,14 +58,14 @@
             @csrf
             <!-- Username Field -->
             <div class="form-group mb-4 position-relative">
-                <input type="text" id="username" required>
+                <input type="text" id="username" name="username" autofocus required>
                 <label for="username">Username</label>
                 <i class="fas fa-user icon"></i>
             </div>
 
             <!-- Password Field -->
             <div class="form-group mb-4 position-relative">
-                <input type="password" id="password" required>
+                <input type="password" id="password" name="password" required>
                 <label for="password">Password</label>
                 <i class="fas fa-lock icon"></i>
             </div>

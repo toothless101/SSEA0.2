@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserList;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -10,11 +11,20 @@ class AuthController extends Controller
 {
     //
     public function login(){
-        return view ('auth.login');
+        return view('auth.login');
     }
 
     function loginPost(Request $request){
+        $request->validate([
+            'username' => "required",
+            'password' => "required"
+        ]);
 
+        $log_credentials = $request->only('username', 'password');
+        if(Auth::attempt($log_credentials)){
+            return redirect()->intended(route("home"));
+        }
+        return redirect(route('login'))->with("danger", "Please enter correct credentials");
     }
 
     function register(){

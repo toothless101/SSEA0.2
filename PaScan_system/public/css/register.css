@@ -14,12 +14,12 @@ body {
 .container {
     display: flex;
     margin: 0 !important;
-    animation-name: sign-in;
-    animation-duration: 1s;
+/*    animation-name: sign-in;
+    animation-duration: 1s;*/
     
 }
 
-@keyframes sign-in{
+/*@keyframes sign-in{
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -28,7 +28,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
+}*/
 
 .alert{
     position: absolute !important;

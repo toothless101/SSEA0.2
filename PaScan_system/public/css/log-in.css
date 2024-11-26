@@ -15,11 +15,11 @@ body {
 .container{
     display: flex;
     margin: 0 !important;
-    animation-name: log-in;
-    animation-duration: 1s;
+ /*   animation-name: log-in;
+    animation-duration: 1s;*/
 }
 
-@keyframes log-in{
+/*@keyframes log-in{
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -28,7 +28,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
+}*/
 
 .alert{
     position: absolute !important;
