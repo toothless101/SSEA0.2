@@ -22,7 +22,7 @@ class AuthController extends Controller
 
         $log_credentials = $request->only('username', 'password');
         if(Auth::attempt($log_credentials)){
-            return redirect()->intended(route("home"));
+            return redirect()->intended(route("dashboard"));
         }
         return redirect(route('login'))->with("danger", "Please enter correct credentials");
     }
