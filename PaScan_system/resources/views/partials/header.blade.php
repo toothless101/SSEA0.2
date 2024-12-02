@@ -13,14 +13,14 @@
           </a>
         </li><!-- End Search Icon-->
 
-        <li class="nav-item dropdown">
+      <!--  <li class="nav-item dropdown">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="fa-solid fa-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification Icon -->
+          </a> End Notification Icon -->
 
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+         <!-- <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
               You have 4 new notifications
               <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
@@ -86,23 +86,23 @@
 
           </ul><!-- End Notification Dropdown Items -->
 
-        </li><!-- End Notification Nav -->
+        <!--</li> End Notification Nav -->
 
+        
+        <!--Profile Start-->
         <li class="nav-item dropdown">
-
-
 
         <li class="nav-item dropdown pe-4">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <i class="rounded-circle fa-solid fa-user"></i>
-            <span class="d-none d-md-block dropdown-toggle ps-2">Hannah </span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">Hannah</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <h6 class="user_name" id="user_name">Admin</h6>
+              <span class="role" id="role">Admin</span>
             </li>
             <li>
               <hr class="dropdown-divider">

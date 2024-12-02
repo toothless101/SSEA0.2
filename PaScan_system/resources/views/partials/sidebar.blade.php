@@ -1,3 +1,5 @@
+<script src="{{asset("js/sidebartoggle.js")}}"></script>
+
 <aside class="sidebar close">
     <div class="logo-details">
         <img src="{{ asset('img/418786725_1079231866656453_7752077010997336838_n (1).png') }}" alt="tccstfi_logo">
@@ -18,13 +20,13 @@
         <!-- Events -->
         <li>
             <div class="iocn-link">
-                <a href="{{ route('event') }}">
-                    <i class="fa-solid fa-bullhorn"></i>
-                    <span class="link_name">Officers</span>
+                <a href="{{ route('officers') }}">
+                    <i class="fa-solid fa-user"></i>
+                <span class="link_name">Officers</span>
                 </a>
                 <!--<i class="bx bxs-chevron-down arrow"></i>--->
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="{{ route('dashboard') }}">Officers</a></li>
+                    <li><a class="link_name" href="{{ route('officers') }}">Officers</a></li>
                 </ul>
             </div>
 
@@ -39,12 +41,12 @@
         <!-- Attendees -->
         <li>
             <div class="iocn-link">
-                <a href="spr.html">
-                    <i class="fa-solid fa-folder"></i>
+                <a href="{{route('event')}}">
+                    <i class="fa-solid fa-calendar-days"></i>
                     <span class="link_name">Events</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="spr.html">Events</a></li>
+                    <li><a class="link_name" href="{{route('event')}}">Events</a></li>
                 </ul>
             </div>
         </li>
@@ -52,7 +54,7 @@
         <!-- Attendance -->
         <li>
             <a href="evaluation.html">
-                <i class="fa-solid fa-file-circle-check"></i>
+                <i class="fa-solid fa-users"></i>
                 <span class="link_name">Attendees</span>
             </a>
             <ul class="sub-menu blank">
@@ -63,7 +65,7 @@
         <!-- Users -->
         <li>
             <a href="courses.html">
-                <i class="fa-solid fa-file-lines"></i>
+                <i class="fa-solid fa-clipboard-list"></i>
                 <span class="link_name">Attendance</span>
             </a>
             <ul class="sub-menu blank">

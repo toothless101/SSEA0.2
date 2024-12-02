@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
   left: 0;
   height: 100%;
   width: 260px;
-  background: #680606;
+  background: #550000;
   z-index: 100;
   transition: all 0.5s ease;
   border-top-right-radius: 20px;
@@ -423,7 +423,7 @@ body::-webkit-scrollbar {
 
 .dashboard .info-card {
   padding-bottom: 10px;
-  background-color: #680606;
+  background-color: #550000;
   border-radius: 20px;
 
 }
@@ -467,7 +467,7 @@ body::-webkit-scrollbar {
 }
 
 .card-date {
-  color: #680606;
+  color: #550000;
   font-weight: 550;
   /*padding: 15px;*/
 }
@@ -570,7 +570,7 @@ body::-webkit-scrollbar {
   padding-bottom: 15px;
   font-weight: bold;
   margin-bottom: 0px;
-  color:#680606;
+  color:#550000;
 }
 #wlcm_card{
     background-color: transparent;
@@ -668,7 +668,7 @@ td:nth-child(1){
   flex-direction: row; /* Stack the legend items vertically */
   align-items: flex-start; /* Align legend items to the left */
   margin-top: 15px; /* Space between the chart and the legend */
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .legend-item{
@@ -685,7 +685,7 @@ td:nth-child(1){
 .legend-color {
   border-radius: 10px;
   height: 15px;
-  width: 50px;
+  width: 70px;
   padding: 5px; /* Add padding inside each legend item */
   color: white; /* Set text color to white (optional, depending on design) */
   font-size: 10px; /* Adjust the font size of the legend text */
