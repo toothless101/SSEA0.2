@@ -12,6 +12,6 @@ class OfficersController extends Controller
     }
 
     function officer_profile(){
-        return view('pages.officer_profile');
+        return view('posts.officer_profile');
     }
 }

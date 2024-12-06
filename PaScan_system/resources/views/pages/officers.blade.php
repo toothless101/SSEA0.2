@@ -31,13 +31,14 @@
                 <tr>
                     <th>Name</th>
                     <th>Position</th>
-                    <th>Action</th>
+                    <th>Edit</th>
+                    <th>Status</th>
                 </tr>
             </thead>
 
             <tbody id="assigned_officer">
                 <tr>
-                    <td>Hilary Mae Poralan</td>
+                    <td id="name-clm">Hilary Mae Poralan</td>
                     <td>VIce President</td>
                     <td></td>
                 </tr>
@@ -46,7 +47,7 @@
 
     </section>
  
-@include('partials.add-officer-modal') <!--ADD NEW OFFICER MODAL-->
+@include('posts.add-officer-modal') <!--ADD NEW OFFICER MODAL-->
     
     <script>
         // Sample data (empty array initially)
@@ -64,7 +65,7 @@
                 const noDataRow = document.createElement("tr");
                 noDataRow.classList.add("no-data");
                 noDataRow.innerHTML = `
-                    <td colspan="3">No data available in table</td>
+                    <td colspan="4">No data available in table</td>
                 `;
                 tableBody.appendChild(noDataRow);
             } else {
@@ -74,7 +75,8 @@
                     row.innerHTML = `
                         <td>${item.name}</td>
                         <td>${item.position}</td>
-                        <td>${item.assigned_event}<td>
+                        <td>${item.edit}<td>
+                        <td>${item.status}</td>
                     `;
                     tableBody.appendChild(row);
                 });

@@ -47,6 +47,8 @@
     color: #333; /* Darker color on hover */
 }
 
+/* OFFICER LIST TABLE*/
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -54,21 +56,25 @@ table {
 }
 
 th, td {
-   border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
     
 }
 
+#name-clm{
+    text-align: start;
+}
 th {
     color: #550000;
     font-weight:lighter;
-    border: 1px solid #ddd;
 }
 
+th:first-child{
+    text-align: start;
+}
 td{
     color: #550000;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 tr.no-data {
@@ -123,6 +129,7 @@ input.form-control {
     border-radius: 5px;
 }
 
+
 .form-group label{
     position: relative;
     transform: translateY(-50px);
@@ -160,3 +167,34 @@ input.form-control {
     color: #550000;
     font-weight: 600;
 }
+
+.officer-detail-container {
+    margin: 0px 15px;
+}
+.officer-detail-container .officer-detail{
+    display: flex;
+    color: #550000;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+#officer-profile-table{
+    margin-top: 10px !important;
+}
+
+table #officer-profile-table tr, th{
+    background-color: #FFEEAD;
+}
+
+#officer-profile-table tr, th:first-child{
+    text-align: start;
+    right: 10px;
+}
+
+#officers-profile td:first-child{
+    text-align: start;
+}
+#officer-profile-table #officers-profile td{
+    background-color: #B3B3B3 ;
+}
+
