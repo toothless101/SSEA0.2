@@ -38,7 +38,7 @@
             </ul> -->
         </li>
 
-        <!-- Attendees -->
+        <!-- Events -->
         <li>
             <div class="iocn-link">
                 <a href="{{route('event')}}">
@@ -51,18 +51,18 @@
             </div>
         </li>
 
-        <!-- Attendance -->
+        <!-- Attendees -->
         <li>
-            <a href="evaluation.html">
+            <a href="{{route('attendees')}}">
                 <i class="fa-solid fa-users"></i>
                 <span class="link_name">Attendees</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="evaluation.html">Attendees</a></li>
+                <li><a class="link_name" href="{{route('attendees')}}">Attendees</a></li>
             </ul>
         </li>
 
-        <!-- Users -->
+        <!-- Attendance -->
         <li>
             <a href="courses.html">
                 <i class="fa-solid fa-clipboard-list"></i>

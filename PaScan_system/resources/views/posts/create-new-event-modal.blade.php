@@ -13,91 +13,153 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addEventModalLabel">Add New Event</h5>
+                <h5 class="modal-title" id="addEventModalLabel">Create New Event</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="addEvent">
                     <div class="row mt-1">
                         <!-- Event Name -->
-                        <div class="form-group col-md-6 mb-3">
-                            <input type="text" id="eventName" class="form-control">
+                        <div class="form-group col-md-6 mb-5">
                             <label for="eventName" class="form-label">Event Name</label>
-                        </div>
-
-                        <!-- Date of Event -->
-                        <div class="form-group col-md-6 mb-3">
-                            <div class="input-group">
-                                <input type="text" id="date-of-an-event" class="form-control datepicker">
-                                <button class="btn btn-outline-secondary" type="button" id="datepicker-trigger">
-                                    <i class="bi bi-calendar2-event"></i>
-                                </button>
-                            </div>
-                            <label for="date-of-an-event" class="form-label">Date of an Event</label>
-                        </div>
-
-                        <!-- Event Place -->
-                        <div class="form-group col-md-6 mb-3">
-                            <input type="text" id="eventPlace" class="form-control">
-                            <label for="eventPlace" class="form-label">Event Place</label>
+                            <input type="text" id="eventName" class="form-control">
                         </div>
 
                         <!-- Event Type -->
                         <div class="form-group col-md-6 mb-3">
-                            <select id="eventType" class="form-select">
-                                <option selected disabled>Select an Event Type</option>
-                                <option value="1">Wholeday</option>
-                                <option value="2">Half-Day Morning</option>
-                                <option value="3">Half-Day Afternoon</option>
-                                <option value="4">Other</option>
-                            </select>
                             <label for="eventType" class="form-label">Event Type</label>
+                            <select id="eventType" class="form-select">
+                                <option value="none">Select an Event Type</option>
+                                <option value="whole-day">Wholeday</option>
+                                <option value="half-day-morning">Half-Day Morning</option>
+                                <option value="half-day-afternoon">Half-Day Afternoon</option>
+                            </select>
                         </div>
-                    </div>
 
-                    <!-- Morning Schedule -->
-                    <div class="row time-schedule">
-                        <div class="col-md-6 mb-3 event-type">
-                            <h6 class="sched_type fw-500">Morning Schedule</h6>
-                            <div class="row g-3">
-                                <div class="form-group row mt-3">
-                                    <div class="input-group">
-                                        <div class="cs-form">
-                                            <input type="time" class="form-control" />
-                                          </div>
-                                    </div>
-                                    <label for="morningStartTime" class="form-label">Start Time</label>
-                                </div>
-                                <div class="form-group row mt-3">
-                                    <div class="input-group">
-                                        <div class="cs-form">
-                                            <input type="time" class="form-control" />
-                                          </div>
-                                    </div>
-                                    <label for="morningEndTime" class="form-label">End Time</label>
-                                </div>
+                        <!-- Event Place -->
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="eventPlace" class="form-label">Event Venue</label>
+                            <input type="text" id="eventPlace" class="form-control">
+                        </div>
+
+
+                        <!-- Date of Event -->
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="dateofEvent" class="form-label" id="eventDate">Event Date</label>
+                            <div class="input-group">
+                                <input type="text" id="dateofEvent" class="form-control datepicker">
+                                <button class="btn btn-outline-secondary" type="button" id="datepicker-trigger">
+                                    <i class="bi bi-calendar2-event"></i>
+                                </button>
                             </div>
                         </div>
 
-                        <!-- Afternoon Schedule -->
-                        <div class="col-md-6 mb-3 event-type">
-                            <h6 class="sched_type fw-500">Afternoon Schedule</h6>
-                            <div class="row g-3">
-                                <div class="form-group row mt-3">
-                                    <div class="input-group">
-                                        <div class="cs-form">
-                                            <input type="time" class="form-control" />
-                                          </div>
-                                    </div>
-                                    <label for="afternoonStartTime" class="form-label">Start Time</label>
+                    </div>
+
+
+                      <div class="assigned-officers mt-2">
+                        <div class="ass-div-title">
+                            <h6>Assign Officers</h6>
+                        </div>
+                        <div class="container-border border rounded border-dark">
+                            <div class="officer-icon">
+                                <img src="{{asset('img/officer-icon.png')}}" alt="">
+                            </div>
+                            <div class="col-md-4">
+                               <select class="form-select" name="assignofficers" id="officer_id">
+                                <option selected disabled>Select an Officer</option>
+                                <option value="">No Officer Available</option>
+                                <option value="officer_id"></option>
+                               </select>
+                            </div>
+                            <div class="addOfficer">
+                                <button class="btn btn-new-officer">
+                                    Add Officer
+                                </button>
+                            </div>
+                            <div class="checkbox-container col-md-6">
+                                <div class="checkbox-item" id="day1">
+                                  Day 1 <input type="checkbox" id="cb_day1">
                                 </div>
-                                <div class="form-group row mt-3">
-                                    <div class="input-group">
-                                        <div class="cs-form">
-                                            <input type="time" class="form-control" />
-                                          </div>
+                                <div class="checkbox-item" id="day2">
+                                  Day 2 <input type="checkbox" id="cb_day2">
+                                </div>
+                                <div class="checkbox-item" id="day3">
+                                  Day 3 <input type="checkbox" id="cb_day3">
+                                </div>
+                                <div class="checkbox-item" id="day4">
+                                  Day 4 <input type="checkbox" id="cb_day4">
+                                </div>
+                                <div class="checkbox-item" id="day5">
+                                  Day 5 <input type="checkbox" id="cb_day5">
+                                </div>
+                                <div class="checkbox-item" id="day6">
+                                  Day 6 <input type="checkbox" id="cb_day6">
+                                </div>
+                                <div class="checkbox-item" id="day7">
+                                  Day 7 <input type="checkbox" id="cb_day7">
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+
+                      <!--TIME SCHEDULE-->
+                      <div class="container mt-4">
+                        <div class="row">
+                            <!-- Morning Schedule -->
+                            <div class="col-md-6 schedule-section" id="morningSchedule" style="display:none;">
+                                <div class="div-title">Morning Schedule</div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="checkInLabel">Check In</h6>
+                                        <div class="checkInLabel">Start Time</div>
+                                        <div class="input-group">
+                                            <input type="time" id="morning-checkin" class="form-control">
+                                        </div>
+                                        <div class="checkInLabel">End Time</div>
+                                        <div class="input-group">
+                                            <input type="time" id="morning-checkin-end" class="form-control">
+                                        </div>
                                     </div>
-                                    <label for="afternoonEndTime" class="form-label">End Time</label>
+                                    <div class="col-6">
+                                        <h6 class="checkInLabel">Check Out</h6>
+                                        <div class="checkInLabel">Start Time</div>
+                                        <div class="input-group">
+                                            <input type="time" id="morning-checkout" class="form-control">
+                                        </div>
+                                        <div class="checkInLabel">End Time</div>
+                                        <div class="input-group">
+                                            <input type="time" id="morning-checkout-end" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Afternoon Schedule -->
+                            <div class="col-md-6 schedule-section" id="afternoonSchedule" style="display:none;">
+                                <div class="div-title">Afternoon Schedule</div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="checkInLabel">Check In</h6>
+                                        <div class="checkInLabel">Start Time</div>
+                                        <div class="input-group">
+                                            <input type="time" id="afternoon-checkin-start" class="form-control">
+                                        </div>
+                                        <div class="checkInLabel">End Time</div>
+                                        <div class="input-group">
+                                            <input type="time" id="afternoon-checkin-end" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6 class="checkInLabel">Check Out</h6>
+                                        <div class="checkInLabel">Start Time</div>
+                                        <div class="input-group">
+                                            <input type="time" id="afternoon-checkout-start" class="form-control">
+                                        </div>
+                                        <div class="checkInLabel">End Time</div>
+                                        <div class="input-group">
+                                            <input type="time" id="afternoon-checkout-end" class="form-control">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -106,11 +168,13 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-submit">Submit</button>
+                <button type="button" class="btn btn-submit">Create Event</button>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <!--SUCCESS MODAL
 <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
@@ -140,19 +204,53 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
 <script>
-    $(document).ready(function () {
-        // Initialize the datepicker
-        $('.datepicker').datepicker({
-            format: 'dd/mm/yyyy',
-            autoclose: true,
-            todayHighlight: true
-        });
-
-        // Trigger the datepicker on calendar icon click
-        $('#datepicker-trigger').click(function () {
-            $('#date-of-an-event').focus();
-        });
-
-    
+  $(document).ready(function () {
+    // Initialize the datepicker (using jQuery)
+    $('.datepicker').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true,
+        todayHighlight: true
     });
+
+    // Trigger the datepicker on calendar icon click
+    $('#datepicker-trigger').click(function () {
+        $('#date-of-an-event').focus();
+    });
+
+    // Get references to the DOM elements by their IDs
+    const eventType = document.getElementById("eventType");
+    const morningSchedule = document.getElementById("morningSchedule");
+    const afternoonSchedule = document.getElementById("afternoonSchedule");
+
+    // Function to update the layout based on selected event type
+    function updateLayout() {
+        const selectedType = eventType.value; // Get the selected value from the dropdown
+
+        // Handle the different schedule types
+        if (selectedType === "whole-day") {
+            morningSchedule.style.display = 'block'; // Show morning schedule
+            afternoonSchedule.style.display = 'block'; // Show afternoon schedule
+            
+        } else if (selectedType === "half-day-morning") {
+            morningSchedule.style.display = 'block'; // Show morning schedule
+            afternoonSchedule.style.display = 'none'; // Hide afternoon schedule
+        } else if (selectedType === "half-day-afternoon") {
+            morningSchedule.style.display = 'none'; // Hide morning schedule
+            afternoonSchedule.style.display = 'block'; // Show afternoon schedule
+        
+        }
+        else if(selectedType === "none"){
+            morningSchedule.style.display = "none";
+            afternoonSchedule.style.display = "none";
+        }
+    }
+
+    // Attach event listener to the dropdown to call updateLayout on change
+    eventType.addEventListener('change', updateLayout);
+
+    // Initialize with "whole-day" selected by default
+    eventType.value = 'none';
+    updateLayout(); // Update layout when page loads
+});
+
 </script>

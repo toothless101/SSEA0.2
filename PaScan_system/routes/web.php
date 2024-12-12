@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendeesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\OfficersController;
@@ -17,4 +18,5 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 Route::get('/event', [EventController::class, 'event'])->name('event');
 Route::get('/dashboard', [EventController::class, 'dashboard'])->name('dashboard');
 Route::get('/officers', [OfficersController::class, 'officers'])->name('officers');
-Route::get('/officer_profile', [OfficersController::class, 'officer_profile'])->name('officer_profile');
+Route::get('/officer_profile', [OfficersController::class, 'officer_profile'])->name('officer_profile');//for officer profile view (only for viewing this time)
+Route::get('/attendees', [AttendeesController::class, 'attendees'])->name('attendees');

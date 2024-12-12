@@ -21,6 +21,7 @@
                 type="text" 
                 class="search-input" 
                 placeholder="Search"
+                id="search_bar"
             >
             <button class="search-btn">
                 <i class="fas fa-search"></i>
@@ -32,16 +33,18 @@
     <table id="eventdataTable">
         <thead>
             <tr>
+                <th>No.</th>
                 <th>Event Name</th>
-                <th>Status</th>
-                <th>Date</th>
-                <th>Time</th>
+                <th>Details</th>
                 <th>Officer Assigned</th>
+                <th>Status</th>
+                <th>Action</th>
             </tr>
         </thead>
 
         <tbody id="event-list">
             <tr>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -54,6 +57,7 @@
 </section>
 
 @include('posts.create-new-event-modal')
+
 
 
 <script>
@@ -72,14 +76,16 @@
             const noDataRow = document.createElement("tr");
             noDataRow.classList.add("no-data");
             noDataRow.innerHTML = `
-                <td colspan="5">No data available in table</td>
+                <td colspan="6">No data available in table</td>
             `;
             tableBody.appendChild(noDataRow);
         } else {
             // Populate table with data
             data.forEach(item => {
                 const row = document.createElement("tr");
-                row.innerHTML = `
+                row.innerHTML = 
+                `   
+                    <td>${item.no}
                     <td>${item.event-name}</td>
                     <td>${item.status}</td>
                     <td>${item.date}<td>

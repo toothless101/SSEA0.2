@@ -15,4 +15,5 @@ class EventController extends Controller
     function dashboard(){
         return view('dashboard');
     }
+
 }

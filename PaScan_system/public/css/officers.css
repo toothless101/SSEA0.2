@@ -124,6 +124,11 @@ tr.no-data {
     color: white;
 }
 
+.btn-submit:hover{
+    background-color: #800505;
+    color:white;
+}
+
 input.form-control {
     border: 1px solid #000;
     border-radius: 5px;

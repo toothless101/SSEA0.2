@@ -1,3 +1,4 @@
+
 <section class="home-section">
     <div class="home-content">
       <i class='fa-solid fa-bars toggle-sidebar-btn' ></i>
@@ -96,7 +97,7 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <i class="rounded-circle fa-solid fa-user"></i>
-            <span class="d-none d-md-block dropdown-toggle ps-2">Hannah</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">

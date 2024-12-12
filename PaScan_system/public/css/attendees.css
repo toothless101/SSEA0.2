@@ -1,0 +1,47 @@
+.btn-add-student{
+    background-color: #550000 !important;
+    border: transparent !important;
+    color: white !important;
+}
+.btn-add-student:hover{
+    background-color: #800505 !important;
+    color:white !important;
+}
+
+.search-container {
+    position: relative; 
+    display: inline-block; 
+    width: 380px; 
+}
+
+.search-input {
+    width: 100%; 
+    padding: 5px 40px 5px 15px; 
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background-color: #B3B3B380; 
+}
+
+.search-input::placeholder {
+    color: #888; 
+}
+
+.search-btn {
+    position: absolute; 
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background: none; 
+    border: none;
+    color: #555; 
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    color: #333; /* Darker color on hover */
+}
