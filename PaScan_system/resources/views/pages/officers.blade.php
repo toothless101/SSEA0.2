@@ -4,7 +4,10 @@
 
 <link rel="stylesheet" href="{{ asset('css/officers.css') }}">
 @include('partials.sidebar')
-@include('partials.header')
+<x-header-section>
+    Officers
+</x-header-section>
+
     <section id="main" class="main">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <!-- New Officer Button -->

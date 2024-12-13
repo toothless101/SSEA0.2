@@ -20,38 +20,38 @@
                 <form id="addEvent">
                     <div class="row mt-1">
                         <!-- Event Name -->
-                        <div class="form-group col-md-6 mb-5">
-                            <label for="eventName" class="form-label">Event Name</label>
+                        <div class="form-group col-md-6">
                             <input type="text" id="eventName" class="form-control">
+                            <label for="eventName" class="form-label">Event Name</label>
                         </div>
 
                         <!-- Event Type -->
                         <div class="form-group col-md-6 mb-3">
-                            <label for="eventType" class="form-label">Event Type</label>
                             <select id="eventType" class="form-select">
-                                <option value="none">Select an Event Type</option>
+                                <option value="none" disabled>Select an Event Type</option>
                                 <option value="whole-day">Wholeday</option>
                                 <option value="half-day-morning">Half-Day Morning</option>
                                 <option value="half-day-afternoon">Half-Day Afternoon</option>
                             </select>
+                            <label for="eventType" class="form-label">Event Type</label>
                         </div>
 
                         <!-- Event Place -->
                         <div class="form-group col-md-6 mb-3">
-                            <label for="eventPlace" class="form-label">Event Venue</label>
                             <input type="text" id="eventPlace" class="form-control">
+                            <label for="eventPlace" class="form-label">Event Venue</label>
                         </div>
 
 
                         <!-- Date of Event -->
                         <div class="form-group col-md-6 mb-3">
-                            <label for="dateofEvent" class="form-label" id="eventDate">Event Date</label>
                             <div class="input-group">
                                 <input type="text" id="dateofEvent" class="form-control datepicker">
                                 <button class="btn btn-outline-secondary" type="button" id="datepicker-trigger">
                                     <i class="bi bi-calendar2-event"></i>
                                 </button>
                             </div>
+                            <label for="dateofEvent" class="form-label" id="eventDate">Event Date</label>
                         </div>
 
                     </div>
@@ -112,22 +112,22 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <h6 class="checkInLabel">Check In</h6>
-                                        <div class="checkInLabel">Start Time</div>
+                                        <div class="startEndLabel">Start Time</div>
                                         <div class="input-group">
                                             <input type="time" id="morning-checkin" class="form-control">
                                         </div>
-                                        <div class="checkInLabel">End Time</div>
+                                        <div class="startEndLabel">End Time</div>
                                         <div class="input-group">
                                             <input type="time" id="morning-checkin-end" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <h6 class="checkInLabel">Check Out</h6>
-                                        <div class="checkInLabel">Start Time</div>
+                                        <div class="startEndLabel">Start Time</div>
                                         <div class="input-group">
                                             <input type="time" id="morning-checkout" class="form-control">
                                         </div>
-                                        <div class="checkInLabel">End Time</div>
+                                        <div class="startEndLabel">End Time</div>
                                         <div class="input-group">
                                             <input type="time" id="morning-checkout-end" class="form-control">
                                         </div>
@@ -140,22 +140,22 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <h6 class="checkInLabel">Check In</h6>
-                                        <div class="checkInLabel">Start Time</div>
+                                        <div class="startEndLabel">Start Time</div>
                                         <div class="input-group">
                                             <input type="time" id="afternoon-checkin-start" class="form-control">
                                         </div>
-                                        <div class="checkInLabel">End Time</div>
+                                        <div class="startEndLabel">End Time</div>
                                         <div class="input-group">
                                             <input type="time" id="afternoon-checkin-end" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <h6 class="checkInLabel">Check Out</h6>
-                                        <div class="checkInLabel">Start Time</div>
+                                        <div class="startEndLabel">Start Time</div>
                                         <div class="input-group">
                                             <input type="time" id="afternoon-checkout-start" class="form-control">
                                         </div>
-                                        <div class="checkInLabel">End Time</div>
+                                        <div class="startEndLabel">End Time</div>
                                         <div class="input-group">
                                             <input type="time" id="afternoon-checkout-end" class="form-control">
                                         </div>

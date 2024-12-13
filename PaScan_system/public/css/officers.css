@@ -69,6 +69,10 @@ th {
     font-weight:lighter;
 }
 
+tr, th{
+    font-size: 13px;
+}
+
 th:first-child{
     text-align: start;
 }
@@ -187,7 +191,7 @@ input.form-control {
     margin-top: 10px !important;
 }
 
-table #officer-profile-table tr, th{
+table #officer-profile-table th{
     background-color: #FFEEAD;
 }
 

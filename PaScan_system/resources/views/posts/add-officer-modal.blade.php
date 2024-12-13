@@ -10,7 +10,7 @@
             </div>
             <div class="modal-body">
                 <!-- Profile Icon -->
-                <img src="https://via.placeholder.com/80" alt="Officer Icon">
+                <img src="{{asset('img/officer-icon.png')}}" alt="Officer Icon">
                 <!-- Form Fields -->
                 <form id="addOfficer">
                     <div class="row mt-3">

@@ -1,12 +1,15 @@
 @extends('layout.app')
-@section('title', 'Event')
+@section('title', 'PaScan | Event')
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('css/event.css') }}">
 
 @include('partials.sidebar')
-@include('partials.header')
-@section('page_name', 'Event')
+
+<x-header-section>
+    Event
+</x-header-section>
+
 
 <section id="main" class="main">
     <div class="d-flex justify-content-between align-items-center mb-3">

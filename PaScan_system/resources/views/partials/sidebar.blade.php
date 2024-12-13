@@ -1,9 +1,8 @@
 <script src="{{asset("js/sidebartoggle.js")}}"></script>
 
-<aside class="sidebar close">
+<aside class="sidebar">
     <div class="logo-details">
         <img src="{{ asset('img/418786725_1079231866656453_7752077010997336838_n (1).png') }}" alt="tccstfi_logo">
-        <span class="logo_name">Student Portal</span>
     </div>
     <ul class="nav-links">
         <!-- Dashboard -->
@@ -17,16 +16,27 @@
             </ul>
         </li>
 
-        <!-- Events -->
+        <!--Officers-->
+        <li>
+            <a href="{{route('officers')}}">
+                <i class="fa-solid fa-user"></i>
+                <span class="link_name">Officers</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="{{route('officers')}}">Officers</a></li>
+            </ul>
+        </li>
+
+        <!-- Officer 
         <li>
             <div class="iocn-link">
-                <a href="{{ route('officers') }}">
+                <a href="">
                     <i class="fa-solid fa-user"></i>
                 <span class="link_name">Officers</span>
                 </a>
-                <!--<i class="bx bxs-chevron-down arrow"></i>--->
+                <!--<i class="bx bxs-chevron-down arrow"></i>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="{{ route('officers') }}">Officers</a></li>
+                    <li><a class="link_name" href="">Officers</a></li>
                 </ul>
             </div>
 
@@ -35,20 +45,18 @@
             <li><a href="examination_dates.html">Add Event</a></li>
                 <li><a href="deans_lister.html">Upcoming Events</a></li>
                 <li><a href="events.html">List Events</a></li>
-            </ul> -->
-        </li>
+            </ul> 
+        </li>-->
 
         <!-- Events -->
         <li>
-            <div class="iocn-link">
-                <a href="{{route('event')}}">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <span class="link_name">Events</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="{{route('event')}}">Events</a></li>
-                </ul>
-            </div>
+            <a href="{{route('event')}}">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span class="link_name">Events</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="{{route('event')}}">Events</a></li>
+            </ul>
         </li>
 
         <!-- Attendees -->
@@ -73,9 +81,30 @@
             </ul>
         </li>
 
+        <!--History-->
+        <li>
+            <a href="">
+                <i class="fa-solid fa-history"></i>
+                <span class="link_name">History</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="">History</a></li>
+            </ul>
+        </li>
+
+        <!--REPORTS-->
+        <li>
+            <a href="">
+                <i class="fa-solid fa-layer-group"></i>
+                <span class="link_name">Report</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="">Report</a></li>
+            </ul>
+        </li>
         <!-- Logout -->
         <li>
-            <a href="#" style=margin-top:190px>
+            <a href="#" style=margin-top:100px>
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span class="link_name logout">Log Out</span>
             </a>

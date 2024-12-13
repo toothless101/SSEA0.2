@@ -2,7 +2,7 @@
 <section class="home-section">
     <div class="home-content">
       <i class='fa-solid fa-bars toggle-sidebar-btn' ></i>
-      <span class="text">@yield('page_name')</span>
+      <span class="text">{{ $page_name ?? $slot }}</span>
     
 
     <nav class="header-nav ms-auto">

@@ -134,7 +134,7 @@ body::-webkit-scrollbar {
 }
 
 .sidebar .nav-links li a .link_name {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   color: #fff;
   transition: all 0.1s ease;
