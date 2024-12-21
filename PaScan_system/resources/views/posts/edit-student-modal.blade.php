@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="{{ asset('css/attendees.css') }}">
 
-<div class="modal fade" id="addStudentAttendeesModal" tabindex="-1" aria-labelledby="addStudentAttendeesModalLabel" aria-hidden="true">
+<div class="modal fade" id="EditStudentAttendeesModal" tabindex="-1" aria-labelledby="EditStudentAttendeesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addStudentAttendeesModalLabel">Add Student</h5>
+                <h5 class="modal-title" id="EditStudentAttendeesModalLabel">Edit Student</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -140,7 +140,7 @@
                     <!--BUTTONS-->
   <div class="modal-footer">
     <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
-    <button type="button" class="btn btn-submit">Submit</button>
+    <button type="button" class="btn btn-submit">Update</button>
   </div>    
 </form>
 </div>

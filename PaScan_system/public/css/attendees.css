@@ -69,6 +69,7 @@ tr, th{
 
 td{
     color:#550000;
+    vertical-align: baseline;
 }
 
 tr.no-data {
@@ -78,9 +79,21 @@ tr.no-data {
 .no-data td {
     font-weight: bold;
 }
+tbody tr:nth-child(odd){
+    background-color:rgba(255, 173, 96, .50);
+
+}
+
+tbody tr:nth-child(even){
+    background-color: #FFEEAD;
+}
+
 
 
 /*ADD STUDENT MODAL*/
+.modal{
+    --bs-modal-width: 900px !important;
+}
 .modal-content {
     border: 2px solid #550000;
 }
@@ -113,8 +126,9 @@ tr.no-data {
 /*UPLOAD IMAGE*/
 .custom-file-label {
     position: absolute;
-    right: 20px;
-    left: 10px;
+    top: 216px;
+    right: 32rem;
+    left: 57px;
     z-index: 1;
     height: calc(2.25rem + 2px);
     padding: 0.375rem 0.75rem;
@@ -129,15 +143,12 @@ tr.no-data {
 .custom-file-input {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 50%;
     height: calc(2.25rem + 2px);
     margin: 0;
     opacity: 0;
 }
 
-.custom-file-input:lang(en) ~ .custom-file-label::after {
-    content: "Browse";
-}
 
 .custom-file-label::after {
     position: absolute;
@@ -154,4 +165,85 @@ tr.no-data {
     background-color: #e9ecef;
     border-left: inherit;
     border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.control-label .mt-3{
+    left: 40px !important;
+}
+ /* Image Holder Styling */
+ .image-holder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular Shape */
+    overflow: hidden;
+    border: 2px solid #ddd;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps image aspect ratio */
+  }
+
+
+/*STUDENT PROFILE*/
+
+.btn-back{
+    border: none;
+    background-color: transparent;
+}
+
+.stud-prof{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px
+}
+
+.student_profile_title{
+    color: #550000;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.qr_holder .qr_code img{
+    width: 100px;
+    height: 100px;
+}
+
+.s_year{
+    margin-top: 10px;
+}
+.qr_holder .s_year h6{
+    font-size: 10px ;
+    color:#550000;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.item h5{
+    display: flex;
+    margin: 5px;
+    font-size: 13px;
+    color:#550000;
+}
+
+.label{
+    font-weight: lighter;
+    display: inline-block;
+    min-width: 130px;
+}
+
+.print_qr{
+    border:none;
+    background-color: #550000;
+    color: white;
+    padding: 3px;
+    font-size: 13px;
+    width: 70px;
+    border-radius: 5px;
 }

@@ -42,68 +42,82 @@
     <table id="student_dataTable">
         <thead>
             <tr>
-                <th class="text-center">Roll No.</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th class="text-start">Roll No.</th>
+                <th>Name</th>
                 <th>Department</th>
-                <th>Grd/Yr Level</th>
-                <th>Section</th>
-                <th>Program</th>
-                <th>Major</th>
+                <th>Details</th>
+                <th>QR Code</th>
                 <th>Action</th>
             </tr>
         </thead>
 
         <tbody id="student_info">
             <tr>
-                <td>hilary</td>
+                <td>1</td>
+                <td>Hilary Mae Poralan</td>
+                <td>College</td>
+                <td class="text-start">
+                    <small>Gr/Yr Level: </small>
+                    <small><br>Section:</small>
+                    <small></br>Program/Track:</small>
+                    <small><br>Major:</small>
+                    <small><br>S.Y.:</small>
+                </td>
+                <td></td>
+                <td>
+                    <div class="action-btn">
+                        <a href="" class="" data-bs-toggle="modal" data-bs-target="#EditStudentAttendeesModal">
+                            <i class="bi bi-pencil-fill" style="color: #550000;"></i>
+                        </a>
+                    </div>
+                </td>
             </tr>
+            
         </tbody>
     </table>
 </section>
 
 @include('posts.add-student-attendees')
+@include('posts.edit-student-modal')
 
 <script>
 
-    const data = []; 
+    //const data = []; 
     // Reference to table body
-    const studenttableBody = document.querySelector("#student_dataTable tbody");
+    //const studenttableBody = document.querySelector("#student_dataTable tbody");
 
-    function renderTable(data) {
+    //function renderTable(data) {
         // Clear existing rows
-        studenttableBody.innerHTML = "";
+        //studenttableBody.innerHTML = "";
 
-        if (data.length === 0) {
+        //if (data.length === 0) {
             // If no data, display "No data available"
-            const noDataRow = document.createElement("tr");
-            noDataRow.classList.add("no-data");
-            noDataRow.innerHTML = `
-                <td colspan="9">No data available</td>
-            `;
-            studenttableBody.appendChild(noDataRow);
-        } else {
+        //    const noDataRow = document.createElement("tr");
+        //    noDataRow.classList.add("no-data");
+        //    noDataRow.innerHTML = `
+        //        <td colspan="7">No data available</td>
+        //    `;
+        //    studenttableBody.appendChild(noDataRow);
+       // } else {
             // Populate table with data
-            data.forEach(item => {
-                const row = document.createElement("tr");
-                row.innerHTML = `
-                    <td>${item.roll_no}</td>
-                    <td>${item.first_name}</td>
-                    <td>${item.last_name}<td>
-                    <td>${item.department}</td>
-                    <td>${item.grade_yr_lvl}</td>
-                    <td>${item.section}</td>
-                    <td>${item.program}</td>
-                    <td>${item.major}</td>
-                    <td>${item.action}</td>
-                `;
-                studenttableBody.appendChild(row);
-            });
-        }
-    }
+        //    data.forEach(item => {
+        //        const row = document.createElement("tr");
+        //        row.innerHTML = `
+        //            <td>${item.roll_no}</td>
+        //            <td>${item.first_name}</td>
+        //            <td>${item.last_name}<td>
+        //            <td>${item.department}</td>
+        //            <td>${item.details}</td>
+        //            <td>${item.qr_code}</td>
+        //            <td>${item.action}</td>
+        //        `;
+    //            studenttableBody.appendChild(row);
+    //        });
+    //   }
+   // }
 
     // Initial render
-    renderTable(data);
+   // renderTable(data);
 
     
     // Example of adding data dynamically

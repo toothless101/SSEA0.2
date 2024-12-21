@@ -20,3 +20,4 @@ Route::get('/dashboard', [EventController::class, 'dashboard'])->name('dashboard
 Route::get('/officers', [OfficersController::class, 'officers'])->name('officers');
 Route::get('/officer_profile', [OfficersController::class, 'officer_profile'])->name('officer_profile');//for officer profile view (only for viewing this time)
 Route::get('/attendees', [AttendeesController::class, 'attendees'])->name('attendees');
+Route::get('/student_profile', [AttendeesController::class, 'student_profile'])->name('officer_profile');
