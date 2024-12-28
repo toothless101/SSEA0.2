@@ -14,4 +14,5 @@ class AttendeesController extends Controller
     function student_profile(){
         return view('posts.student_profile');
     }
+
 }

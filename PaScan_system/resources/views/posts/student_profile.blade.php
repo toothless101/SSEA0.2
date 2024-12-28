@@ -50,13 +50,40 @@
                     <h6>S.Y. <span>2024-2025</span></h6>
                 </div>
                 <div class="print d-flex justify-content-center">
-                    <button class="print_qr"><i class="bi bi-printer-fill"></i>  Print</button>
+                    <button class="print_qr" data-bs-toggle="modal" data-bs-target="#viewQRCodeModal">
+                        <i class="bi bi-printer-fill"></i>  Print</button>
+                </div>
+            </div>
+        </div>
+        
+        <hr style="height: 2px; border-width: 1; color: #550000; background-color: #550000; ">
+
+        <div class="details-container d-flex">
+            <div class="column-1">
+                <div class="item">
+                    <h5><span class="label">First Name:</span> <span>Hilary Mae</span></h5>
+                </div>
+                <div class="item">
+                    <h5><span class="label">Middle Name:</span><span>Ensomo</span></h5>
+                </div>
+                <div class="item">
+                    <h5><span class="label">Last Name</span><span>Poralan</span></h5>
+                </div>
+                <div class="item">
+                    <h5><span class="label">Mobile Phone</span><span>09982324222</span></h5>
+                </div>
+                <div class="item">
+                    <h5><span class="label">Email Address</span><span>poralanhilarymae@gmail.com</span></h5>
+                </div>
+                <div class="item">
+                    <h5><span class="label">Address</span><span>Apokon, Tagum City</span></h5>
                 </div>
             </div>
         </div>
     </div>
 
-    <hr style="height: 2px; border-width: 1; color: #550000; background-color: #550000; ">
     
 </section>
+
+@include('posts.view-qr-code-modal')
 @endsection

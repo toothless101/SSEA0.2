@@ -20,6 +20,7 @@
             <div class="image-holder">
               <img id="output" src="{{asset('img/no-image-available.png')}}" alt="Placeholder Image">
             </div>
+            
           </div>
           <!-- File Upload Label 
           <label for="customFile" class="control-label mt-3">Upload Image</label>-->

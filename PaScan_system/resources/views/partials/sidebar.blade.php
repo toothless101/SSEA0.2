@@ -1,13 +1,13 @@
 <script src="{{asset("js/sidebartoggle.js")}}"></script>
 
-<aside class="sidebar">
+<aside class="sidebar" id="sidebar">
     <div class="logo-details">
         <img src="{{ asset('img/418786725_1079231866656453_7752077010997336838_n (1).png') }}" alt="tccstfi_logo">
     </div>
     <ul class="nav-links">
         <!-- Dashboard -->
         <li>
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
                 <i class="fa-solid fa-gauge-high"></i>
                 <span class="link_name">Dashboard</span>
             </a>
@@ -18,7 +18,7 @@
 
         <!--Officers-->
         <li>
-            <a href="{{route('officers')}}">
+            <a href="{{route('officers')}}" class="{{request()->routeIs('officers') ? 'active' : ''}}">
                 <i class="fa-solid fa-user"></i>
                 <span class="link_name">Officers</span>
             </a>
@@ -27,7 +27,7 @@
             </ul>
         </li>
 
-        <!-- Officer 
+        <!-- Officer  DROPDOWN
         <li>
             <div class="iocn-link">
                 <a href="">
@@ -50,7 +50,7 @@
 
         <!-- Events -->
         <li>
-            <a href="{{route('event')}}">
+            <a href="{{route('event')}}" class="{{request()-> routeIs ('event') ? 'active' : ''}}">
                 <i class="fa-solid fa-calendar-days"></i>
                 <span class="link_name">Events</span>
             </a>
@@ -61,7 +61,7 @@
 
         <!-- Attendees -->
         <li>
-            <a href="{{route('attendees')}}">
+            <a href="{{route('attendees')}}" class="{{request()-> routeIs ('attendees') ? 'active' : ''}}">
                 <i class="fa-solid fa-users"></i>
                 <span class="link_name">Attendees</span>
             </a>
@@ -72,12 +72,12 @@
 
         <!-- Attendance -->
         <li>
-            <a href="courses.html">
+            <a href="{{route('attendance')}}" class="{{request()-> routeIs ('attendance') ? 'active' : ''}}">
                 <i class="fa-solid fa-clipboard-list"></i>
                 <span class="link_name">Attendance</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="courses.html">Attendance</a></li>
+                <li><a class="link_name" href="">Attendance</a></li>
             </ul>
         </li>
 
@@ -114,3 +114,26 @@
         </li>
     </ul>
 </aside>
+
+<style>
+    .nav-links li a.active{
+        background-color:rgba(54, 17, 17, .90);
+    }
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const menuLinks = document.querySelectorAll('.nav-links li a');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            // Remove the active class from all links
+            menuLinks.forEach(item => item.classList.remove('active'));
+
+            // Add the active class to the clicked link
+            this.classList.add('active');
+        });
+    });
+});
+
+</script>

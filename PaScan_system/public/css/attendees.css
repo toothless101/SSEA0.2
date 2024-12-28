@@ -105,8 +105,18 @@ tbody tr:nth-child(even){
 .modal-header .btn-close {
     background-color: transparent;
     border: none;
-    font-size: 1.2rem;
+    font-size: 13px;
 }
+
+.form-label {
+    position: relative;
+    transform: translateY(16px);
+    left: 12px;
+    background-color: white;
+    transition: 0.3s ease;
+    font-size: 12px;
+}
+
 .btn-cancel {
     border: 1px solid #550000; /* Dark red border */
     color: #800000; /* Dark red text */
@@ -126,7 +136,7 @@ tbody tr:nth-child(even){
 /*UPLOAD IMAGE*/
 .custom-file-label {
     position: absolute;
-    top: 216px;
+    top: 192px;
     right: 32rem;
     left: 57px;
     z-index: 1;
@@ -139,6 +149,10 @@ tbody tr:nth-child(even){
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     box-shadow: none;
+}
+
+.col-md-6{
+    margin-top: 2px;
 }
 .custom-file-input {
     position: relative;
@@ -225,6 +239,10 @@ tbody tr:nth-child(even){
     font-weight: lighter;
 }
 
+.item{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .item h5{
     display: flex;
     margin: 5px;
@@ -246,4 +264,37 @@ tbody tr:nth-child(even){
     font-size: 13px;
     width: 70px;
     border-radius: 5px;
+}
+
+/*PRINT QR CODE MODAL*/
+
+ #viewQRCodeModal.modal{
+    --bs-modal-width: 300px !important;
+} 
+.modal-content hr{
+    margin: 0 !important;
+    color:#550000;
+    height: 2px;
+    border-width: 1;
+    background-color: #550000;
+}
+
+.qr_preview .qr_code_img img{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #550000;
+    border-radius: 5px;
+}
+
+.rollnumber .rollno, .roll_number, .student_name, .studentName {
+    color: #550000;
+}
+
+.rollno label, .stud_title label{
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.rollnumber h6, .studentName h6{
+    font-weight: 600;
 }

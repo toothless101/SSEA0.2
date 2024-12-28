@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\AttendeesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
@@ -21,3 +22,4 @@ Route::get('/officers', [OfficersController::class, 'officers'])->name('officers
 Route::get('/officer_profile', [OfficersController::class, 'officer_profile'])->name('officer_profile');//for officer profile view (only for viewing this time)
 Route::get('/attendees', [AttendeesController::class, 'attendees'])->name('attendees');
 Route::get('/student_profile', [AttendeesController::class, 'student_profile'])->name('officer_profile');
+Route::get('/attendance', [AttendanceController::class, 'attendance'])->name('attendance');
