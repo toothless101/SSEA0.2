@@ -16,6 +16,13 @@
             </ul>
         </li>
 
+            <div class="px-2 pb-2">
+                <small class="d-block px-1" style="color: rgba(255, 255, 255, .6); font-size:12px;">
+                    Manage
+                </small>
+            </div>
+        
+
         <!--Officers-->
         <li>
             <a href="{{route('officers')}}" class="{{request()->routeIs('officers') ? 'active' : ''}}">
@@ -70,6 +77,12 @@
             </ul>
         </li>
 
+        <div class="px-2 pb-2">
+            <small class="d-block px-1" style="color: rgba(255, 255, 255, .6); font-size:12px;">
+                Reports
+            </small>
+        </div>
+
         <!-- Attendance -->
         <li>
             <a href="{{route('attendance')}}" class="{{request()-> routeIs ('attendance') ? 'active' : ''}}">
@@ -81,20 +94,9 @@
             </ul>
         </li>
 
-        <!--History-->
-        <li>
-            <a href="">
-                <i class="fa-solid fa-history"></i>
-                <span class="link_name">History</span>
-            </a>
-            <ul class="sub-menu blank">
-                <li><a class="link_name" href="">History</a></li>
-            </ul>
-        </li>
-
         <!--REPORTS-->
         <li>
-            <a href="">
+            <a href="{{route('report')}}" class="{{request()-> routeIs ('report') ? 'active' : ''}}">
                 <i class="fa-solid fa-layer-group"></i>
                 <span class="link_name">Report</span>
             </a>

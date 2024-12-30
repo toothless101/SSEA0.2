@@ -187,23 +187,35 @@ input.form-control {
     font-size: 12px;
 }
 
-#officer-profile-table{
-    margin-top: 10px !important;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+table thead tr th{
+    color: #550000;
+    font-size: 13px;
+    font-weight: lighter;
 }
 
-table #officer-profile-table th{
-    background-color: #FFEEAD;
+tbody td {
+    color: #550000;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-#officer-profile-table tr, th:first-child{
-    text-align: start;
-    right: 10px;
+/* Add vertical borders to colspan and sub-columns */
+.colspan-header,.sub-column, .sub-column1 {
+    border-left: 1px solid #B3B3B3; /* Left border for sub-columns */
+    border-right: 1px solid #B3B3B3; /* Right border for sub-columns */
 }
 
-#officers-profile td:first-child{
-    text-align: start;
+tbody tr:nth-child(odd){
+    background-color:rgba(255, 173, 96, .50) !important;
+
 }
-#officer-profile-table #officers-profile td{
-    background-color: #B3B3B3 ;
+
+tbody tr:nth-child(even){
+    background-color: #FFEEAD !important;
 }
 

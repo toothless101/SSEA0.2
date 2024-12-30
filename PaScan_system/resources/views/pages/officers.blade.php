@@ -1,5 +1,13 @@
 @extends('layout.app')
 @section('title', 'PaScan | Officers')
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('css/officers.css') }}">
@@ -17,19 +25,15 @@
 
         
             <div class="search-container">
-                <input 
-                    type="text" 
-                    class="search-input" 
-                    placeholder="Search"
-                >
+                <input type="text" class="search-input" placeholder="Search">
                 <button class="search-btn">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
         </div>
 
-        <!--TABLE-->
-        <table id="dataTable">
+        <div class="officer-table mt-5">
+            <table id="officer-datatable" class="display">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -43,69 +47,35 @@
                 <tr>
                     <td id="name-clm">Hilary Mae Poralan</td>
                     <td>VIce President</td>
-                    <td></td>
+                    <td>VIce President</td>
+                    <td>VIce President</td>
                 </tr>
+
             </tbody>
         </table>
+        </div>
+        <!--TABLE-->
+        
 
     </section>
  
 @include('posts.add-officer-modal') <!--ADD NEW OFFICER MODAL-->
     
-    <script>
-        // Sample data (empty array initially)
-        const data = []; // Populate with data dynamically, e.g., [{ name: "John", position: "Manager" }]
 
-        // Reference to table body
-        const tableBody = document.querySelector("#dataTable tbody");
+<script>
+    $(document).ready(function(){
+        $('#officer-datatable').DataTable({
+            dom: 'lt<"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r', 
+            language:{
+                lengthMenu: "Show _MENU_ entries"
+            }      
+        });
 
-        function renderTable(data) {
-            // Clear existing rows
-            tableBody.innerHTML = "";
-
-            if (data.length === 0) {
-                // If no data, display "No data available"
-                const noDataRow = document.createElement("tr");
-                noDataRow.classList.add("no-data");
-                noDataRow.innerHTML = `
-                    <td colspan="4">No data available in table</td>
-                `;
-                tableBody.appendChild(noDataRow);
-            } else {
-                // Populate table with data
-                data.forEach(item => {
-                    const row = document.createElement("tr");
-                    row.innerHTML = `
-                        <td>${item.name}</td>
-                        <td>${item.position}</td>
-                        <td>${item.edit}<td>
-                        <td>${item.status}</td>
-                    `;
-                    tableBody.appendChild(row);
-                });
-            }
-        }
-
-        // Initial render
-        renderTable(data);
-
-        
-        // Example of adding data dynamically
-        // Uncomment this block to simulate data addition
-        /*
-        setTimeout(() => {
-            data.push({ name: "Jane Doe", position: "Developer" });
-            data.push({ name: "John Smith", position: "Designer" });
-            renderTable(data);
-        }, 3000);
-        */
-        // Initialize Bootstrap modal
-
-
-        
-    </script>
-<!-- Bootstrap JavaScript Bundle -->
-
-
+        $('.search-input').on('keyup', function(){
+            $('#officer-datatable').DataTable().search(this.value).draw();
+        });
+    });
+</script>
 @endsection
+
 

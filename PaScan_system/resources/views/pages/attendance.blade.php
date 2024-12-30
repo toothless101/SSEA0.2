@@ -1,5 +1,13 @@
 @extends('layout.app')
 @section('title', 'PaScan | Attendance')
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
 @section('content')
 
 <link rel="stylesheet" href="{{asset('css/attendance.css')}}">
@@ -57,19 +65,10 @@
         <hr>
 
          <!--NUMBER OF ENTRIES TO SHOW-->
-    <div class="show-entries d-flex">
-        <label for="entries">Show</label>
-        <select id="entries" class="form-select mx-2" style="width: auto; font-size: 12px;">
-            <option value="5">5</option>
-            <option value="10" selected>10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-        </select>
-        <label for="entries">entries</label>
-    </div>
+    
 
-
-        <table id="student-attendance_dataTable">
+        <div class="attendanc-table">
+            <table id="student-attendance_dataTable">
             <thead>
                 <tr>
                     <th rowspan="2">Roll No.</th>
@@ -117,9 +116,26 @@
                 </tr>
             </tbody>
         </table>
+        </div>
+        
     </div>
 </section>
 
 @include('posts.qr-scanner-modal')
 
+<script>
+    $(document).ready(function(){
+        $('#student-attendance_dataTable').DataTable({
+            dom: 'lt<"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
+            language: {
+                lengthMenu: "Show _MENU_ entries"
+            }
+        });
+
+        $('.search-input').on('keyup', function(){
+            $('#student-attendance_dataTable').DataTable().search(this.value).draw();
+        });
+
+    });
+</script>
 @endsection

@@ -5,6 +5,7 @@ use App\Http\Controllers\AttendeesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\OfficersController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware("auth")->group(function(){
@@ -23,3 +24,4 @@ Route::get('/officer_profile', [OfficersController::class, 'officer_profile'])->
 Route::get('/attendees', [AttendeesController::class, 'attendees'])->name('attendees');
 Route::get('/student_profile', [AttendeesController::class, 'student_profile'])->name('officer_profile');
 Route::get('/attendance', [AttendanceController::class, 'attendance'])->name('attendance');
+Route::get('/report', [ReportController::class, 'report'])->name('report');

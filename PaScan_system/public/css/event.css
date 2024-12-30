@@ -47,46 +47,31 @@
 }
 
 
+/*table*/
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 50px 0;
-}
-
-th, td {
-    padding: 10px;
     text-align: center;
-    
 }
-
-#name-clm{
-    text-align: start;
-}
-th {
+table thead tr th{
     color: #550000;
-    font-weight:lighter;
-}
-
-th, tr{
     font-size: 13px;
+    font-weight: lighter;
 }
 
-th:first-child{
-    text-align: start;
-}
-td{
+tbody td {
     color: #550000;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-tr.no-data {
-    background-color: #ffe4c4; /* Light orange background */
-    text-align: center;
-    color: #884444; /* Dark brown text */
+tbody tr:nth-child(odd){
+    background-color:rgba(255, 173, 96, .50) !important;
+
 }
 
-.no-data td {
-    font-weight: bold;
+tbody tr:nth-child(even){
+    background-color: #FFEEAD !important;
 }
 
 /*add event modal*/
